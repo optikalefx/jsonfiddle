@@ -20,5 +20,6 @@ var app = new EmberApp();
 // bootstrap
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 app.import('bower_components/jsonlint/lib/jsonlint.js');
+app.import('bower_components/lodash/dist/lodash.min.js');
 
 module.exports = app.toTree();

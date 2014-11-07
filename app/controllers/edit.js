@@ -1,4 +1,4 @@
-/* globals jsonlint, $ */
+/* globals jsonlint, $, _ */
 
 import Ember from 'ember';
 
@@ -15,14 +15,15 @@ export default Ember.Controller.extend({
 			var makeUL = function(lst, type) {
 				var html = [];
 				html.push('<ul>');
-				for(var k in lst) {
-					html.push(makeLI(k, lst[k], type));
-				}
+				_.forEach(lst, function(item, k) {
+					html.push(makeLI(k, item, type));
+				});
 				html.push('</ul>');
 				return html.join("");
 			};
 
 			var makeLI = function(k, elem, type) {
+
 				var html = [];
 				if(Array.isArray(elem)) {
 					html.push("\

@@ -21,8 +21,7 @@ export default Ember.Route.extend({
 				return {
 					user: 'sean',
 					time: new Date(),
-					json: JSON.stringify(json),
-					raw: json
+					json: JSON.stringify(json)
 				};
 			});
 	}
