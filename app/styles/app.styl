@@ -1,2 +1,199 @@
-html, body
-    margin: 20px
+@import 'bower_components/nib'
+
+body
+	min-width:1024px;
+	background:rgb(223,223,223);
+	font-family:verdana;
+	font-size:11px;
+
+
+.btn
+	border-radius 0px
+
+.box
+	box-shadow: inset 0 1px 3px rgb(228, 228, 228);
+	background:white;
+	border:1px solid rgb(173,173,173);
+	margin 5px
+	padding:5px;
+	overflow:auto;
+
+header
+	background rgb(63, 118, 165)
+	background-position:0px 0px;
+	color:white;
+	overflow auto
+	padding 5px 17px
+	box-sizing border-box
+
+	.fiddleUrl
+		position:relative;
+		top:0px;
+		font-weight:normal;
+		padding:8px 30px;
+		font-size:10px;
+		margin-top 3px
+
+	.saveMessage
+		position:relative;
+		top:0px;
+		right:10px;
+		border: 1px solid rgb(170, 170, 170);
+		float:right;
+		opacity:0;
+		transition:opacity 350ms ease-out;
+
+	.saveMessage.show
+		opacity:1;
+
+
+.label-warning, .badge-warning
+	background: rgb(151, 48, 31);
+
+nav
+	width:200px;
+	position:absolute;
+	bottom:0px;
+	left:10px;
+	top:50px;
+	bottom:23px;
+	z-index:99;
+	padding:10px;
+
+	#logo
+		width 100%
+
+	ul
+		margin 20px 0px 0px 15px
+		padding 0px
+
+.main
+	position:absolute;
+	bottom:0px;
+	top:50px;
+	bottom:23px;
+	padding:10px;
+	&.animate
+		transition:all 300ms ease-out;
+
+.drag
+	width: 6px;
+	position: absolute;
+	bottom: 0px;
+	top: 0px;
+	left: 733px;
+	cursor: ew-resize;
+	transition:all 300ms ease-out;
+
+#src
+	left:230px;
+	width:480px;
+	z-index:98;
+	min-width:85px;
+
+	textarea
+		width:100%;
+		height:97%;
+		font-size:11px;
+		border:none;
+		outline:none;
+		box-shadow:none;
+		opacity: 1;
+		transition:all 300ms ease-out;
+
+	&:after
+		content: "Source";
+		position: absolute;
+		top: 15px;
+		right: 30px;
+		padding: 3px 7px;
+		font-size: 10px;
+		background-color: whiteSmoke;
+		border: 1px solid rgb(221, 221, 221);
+		color: rgb(157, 160, 164);
+		border-radius:4px;
+		opacity:.5;
+
+#viewer
+	left:728px;
+	right:10px;
+	z-index:97;
+
+	pre
+		font-size:10px;
+		line-height:12px;
+		background:none;
+		border:none;
+
+	&:after
+		content: "Viewer";
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		padding: 3px 7px;
+		font-size: 10px;
+		background-color: whiteSmoke;
+		border: 1px solid rgb(221, 221, 221);
+		color: rgb(157, 160, 164);
+		border-radius:4px;
+		opacity:.5;
+
+	.sybmol
+		display:inline-block;
+		margin-right:5px;
+		font-weight:bold;
+
+		&.light
+			opacity:.8;
+
+		span
+			font-weight:normal;
+
+
+	.val
+		display:inline-block;
+		color: #008000;
+
+		&.bool.true
+			color:darkgreen;
+
+		&.bool.false
+			color:darkred;
+
+		&.number
+			color:darkblue;
+	.key
+		display:inline-block;
+		margin-right:15px;
+		color:#888;
+	ul, li
+		list-style:none;
+		margin-left:6px;
+
+	ul:first-child
+		margin-left:0px;
+
+	.arrow
+		transform: rotateY(180deg);
+		display:inline-block;
+		margin-right:5px;
+		transition:all 400ms ease-out;
+
+		&.closed
+			transform: rotateY(180deg) rotateZ(90deg)
+
+footer
+	min-width: 578px;
+	bottom: 0;
+	font-size: 10px;
+	line-height 10px
+	left: 10px;
+	right: 10px;
+	padding: 6px 10px 0 10px !important;
+	position: fixed;
+	z-index: 901;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color:#555;
+	margin:0px !important;
